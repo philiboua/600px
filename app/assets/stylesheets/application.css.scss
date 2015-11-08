@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//Base files
+@import 'Base/_mixins';
+@import 'Base/_globals';
+@import 'Base/_normalize';
+
