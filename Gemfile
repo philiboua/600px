@@ -7,8 +7,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'simple_form'
-gem "cocoon"
-gem "haml-rails", "~> 0.9"
+gem 'cocoon'
+gem 'devise'
+gem 'haml-rails', "~> 0.9"
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -23,9 +24,10 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'spring-commands-rspec'
-  gem 'guard-rspec'
+  gem 'guard-rspec', require: false
   gem 'rb-fsevent'
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :test do 
