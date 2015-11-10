@@ -1,0 +1,41 @@
+
+// Devise registration page
+
+.sign_up_wrap {
+  
+  background-image: url(image_path('sign_up_background.jpeg'));
+  height: 100vh;
+  background-size: cover;
+  background-position:  center;
+  text-align: center;
+  overflow: scroll;
+  
+}
+
+.sign_up_form {
+  
+  margin-top: 80px;
+  padding: 15px;
+  background-color:rgba(0,0,0,0.3);
+  color: #fff;
+
+}
+
+// Devise Login Page
+
+.sign_in_wrap {
+  
+  background-image: url(image_path('sign_in_page.jpeg'));
+  height: 100vh;
+  background-size: cover;
+  background-position:  center;
+  text-align: center;
+  overflow: scroll;
+
+}
+
+.sign_in_form {
+
+  @extend .sign_up_form;
+  
+}

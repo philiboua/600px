@@ -15,11 +15,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :production do 
+
   gem 'pg'
+
 end
 
 
 group :development, :test do
+
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -29,10 +32,15 @@ group :development, :test do
   gem 'rb-fsevent'
   gem 'sqlite3'
   gem 'pry'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
+
 end
 
 group :test do 
-  gem 'shoulda-matchers', '~> 3.0'
+
+  gem 'shoulda-matchers','~> 2.8.0', require: false
   gem 'capybara'
+
 end
 
