@@ -24,11 +24,15 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "spring rspec", all_on_start: true  do
+guard :rspec, cmd: "spring rspec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
   # Feel free to open issues for suggestions and improvements
+
+  # Watch factories
+  watch(%r{^spec/factories/(.+)\.rb$}) { "spec/support/factories_spec.rb" }
+
 
   # RSpec files
   rspec = dsl.rspec

@@ -1,0 +1,27 @@
+// Profiles new page
+
+#profile-wrapper {
+
+  background-image: url(image_path('profile_new_page.jpeg'));
+  height: 100vh;
+  background-size: cover;
+  background-position:  center;
+  text-align: center;
+  overflow: scroll; 
+
+}
+
+.profile-new-form {
+  
+  margin-top: 40px;
+  padding: 15px;
+  background-color:rgba(0,0,0,0.12);
+  color: #fff;
+  
+}
+
+.profile-title {
+  
+  color: #fefecd;
+  margin-top: 70px;
+}

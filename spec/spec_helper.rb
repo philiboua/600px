@@ -6,6 +6,8 @@
 
   # require 'rspec/autorun'
   require 'shoulda/matchers'
+  require_relative 'support/controller_helpers'
+  require 'devise'
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run, even for an
@@ -19,6 +21,14 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  config.include ControllerHelpers, type: :controller
+  Warden.test_mode!
+
+  config.after do
+    Warden.test_reset!
+  end
+
 
   
   # rspec-expectations config goes here. You can use an alternate

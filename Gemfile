@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'cocoon'
 gem 'devise'
 gem 'haml-rails', "~> 0.9"
+gem 'country_select'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -31,6 +32,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'rb-fsevent'
   gem 'sqlite3'
+  gem 'faker'
   gem 'pry'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
@@ -38,7 +40,7 @@ group :development, :test do
 end
 
 group :test do 
-
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'shoulda-matchers','~> 2.8.0', require: false
   gem 'capybara'
 

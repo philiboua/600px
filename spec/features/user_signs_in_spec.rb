@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.feature 'signs in flow' do 
 
   before(:each) do
-    @user = FactoryGirl.create(:user)
+    @user = create(:user)
   end
 
     scenario 'User signs in with correct credentials' do
       as_user_when_i_visit_new_user_session_page
       and_fill_in_my_email_and_password
       and_click_log_in
-      i_should_be_redirected_to_root_page
+      i_should_be_redirected_to_home_page
     end
 
     scenario 'User signs in with incorrect credentials' do
@@ -38,7 +38,7 @@ RSpec.feature 'signs in flow' do
       click_button 'Log in'
     end
 
-    def i_should_be_redirected_to_root_page
+    def i_should_be_redirected_to_home_page
       expect(page.current_path).to eq root_path
     end
 
