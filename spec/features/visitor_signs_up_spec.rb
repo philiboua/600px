@@ -6,7 +6,8 @@ RSpec.feature 'Visitor signs up' do
     as_a_visitor_when_i_visit_the_registration_page
     and_fill_in_the_sign_up_form
     and_click_sign_up
-    i_should_be_redirected_to_new_profile_page
+    i_should_be_logged_in_as_a_user
+    and_be_redirected_to_new_profile_page
   end
 
   scenario 'Visitor signs up with invalid email or password' do
@@ -36,9 +37,16 @@ RSpec.feature 'Visitor signs up' do
     click_button 'Sign up'
   end
 
-  def i_should_be_redirected_to_new_profile_page
+  def i_should_be_logged_in_as_a_user
+    @user = create(:user)
+    login_as(@user, :scope => :user)
+  end
+
+  def and_be_redirected_to_new_profile_page
     expect(page.current_path).to eq new_profile_path
   end
+
+  #if registration is not successful
 
   def i_should_be_redirected_to_users_page
     expect(page.current_path).to eq '/users'

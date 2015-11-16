@@ -1,8 +1,10 @@
 class ProfilesController < ApplicationController
 
-  before_action :authenticate_user!
- 
+  respond_to :html, :js
 
+  before_action :authenticate_user!
+  layout 'user'
+ 
   def new
     @profile = Profile.new
   end
@@ -14,13 +16,27 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
-
-      if @profile.save
-        redirect_to @profile
-      else
-        render :new
-      end
+    if @profile.save
+      redirect_to @profile
+    else
+      render :new
+    end
   end
+
+  def edit
+    @profile = Profile.find(params[:id])
+  end
+
+  def update 
+    @profile = Profile.find(params[:id])
+    if @profile.update_attributes(profile_params)
+      redirect_to @profile
+    else
+      render :edit 
+    end
+  end
+
+
 
   private
 

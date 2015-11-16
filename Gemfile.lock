@@ -91,6 +91,8 @@ GEM
     faker (1.4.3)
       i18n (~> 0.5)
     ffi (1.9.10)
+    font-awesome-rails (4.4.0.0)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -281,6 +283,7 @@ DEPENDENCIES
   devise
   factory_girl_rails (~> 4.0)
   faker
+  font-awesome-rails
   guard-rspec
   haml-rails (~> 0.9)
   jbuilder (~> 2.0)
@@ -293,7 +296,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  shoulda-matchers (~> 2.8.0)
+  shoulda-matchers
   simple_form
   spring
   spring-commands-rspec

@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'simple_form'
+gem "font-awesome-rails"
 gem 'cocoon'
 gem 'devise'
 gem 'haml-rails', "~> 0.9"
@@ -41,7 +42,7 @@ end
 
 group :test do 
   gem 'launchy', '~> 2.4', '>= 2.4.3'
-  gem 'shoulda-matchers','~> 2.8.0', require: false
+  gem 'shoulda-matchers', require: false
   gem 'capybara'
 
 end

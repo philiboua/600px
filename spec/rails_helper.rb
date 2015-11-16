@@ -20,6 +20,7 @@ require 'shoulda/matchers'
 # of increasing the boot-up time by auto-requiring all files in the support
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
+
 #
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
@@ -40,6 +41,8 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and

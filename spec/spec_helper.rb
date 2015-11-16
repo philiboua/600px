@@ -5,6 +5,7 @@
 # files.
 
   # require 'rspec/autorun'
+
   require 'shoulda/matchers'
   require_relative 'support/controller_helpers'
   require 'devise'
@@ -15,6 +16,8 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
+
+
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.

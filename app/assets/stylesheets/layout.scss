@@ -1,0 +1,58 @@
+.navigation_wrapper {
+  
+  height: 50px;
+  width: 100%;
+  background-color: #222222;
+  
+}
+
+.brand-logo {
+  
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: 200;
+  color: #fff;
+  float:left;
+ 
+}
+
+.navigation { 
+
+  height: inherit;
+
+}
+
+.navigation li { 
+  
+  display: inline;
+  margin-right: 20px;
+  height: inherit;
+
+}
+
+.navigation-item {
+  
+  float:left;
+  color:#b9c1c7;
+  padding-top: 10px;
+  font-size: 18px;
+  margin-bottom: 0px;
+
+}
+
+.wrapper { 
+  
+}
+
+.navigation-item > li > a { 
+  
+  color: #b9c1c7;
+  text-decoration: none;
+
+  &:hover {
+
+    color: #fff;
+
+  }
+
+}
