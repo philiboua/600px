@@ -10,6 +10,10 @@ gem 'simple_form'
 gem "font-awesome-rails"
 gem 'cocoon'
 gem 'devise'
+gem 'figaro'
+gem 'fog'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'haml-rails', "~> 0.9"
 gem 'country_select'
 gem 'turbolinks'

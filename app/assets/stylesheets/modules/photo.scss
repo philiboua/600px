@@ -1,0 +1,58 @@
+.container { 
+
+}
+
+.main-container { 
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.photo-container {
+  
+  width: calc(100% - 300px);
+  background-color: black;
+  padding: 20px;
+  height: 650px;
+
+}
+
+.photo-sidebar { 
+  
+  width:300px;
+  height:650px;
+  background-color: #fff;
+
+}
+
+.resp-img { 
+  
+  width: 100%;
+
+}
+
+.profile-info-wrapper { 
+  
+  padding: 20px;
+
+}
+
+.profile-info{ 
+  
+  width: 260px;
+  height: 50px;
+
+}
+
+.profile-photo { 
+  
+  width: 50px;
+  height: 50px;
+}
+
+.user-photo { 
+  width: 100%;
+  border-radius: 50%;
+
+}

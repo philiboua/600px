@@ -6,6 +6,8 @@ describe ProfilesController do
 
     before :each do
       login_with nil
+      create(:user)
+      create(:profile, user_id: '1')
     end 
 
     it " redirects to login page" do 
@@ -15,6 +17,7 @@ describe ProfilesController do
     end
 
   end
+
 
   context "User is logged in" do
 
@@ -54,7 +57,7 @@ describe ProfilesController do
               post :create, profile: attributes_for(:profile,first_name: nil, user_id: '1')
             }.to_not change(Profile, :count)
         end
-        it "renders the the new template" do 
+        it "renders the new template" do 
           post :create, profile: attributes_for(:profile,first_name: nil, user_id: '1')
           expect(response).to render_template :new
         end    

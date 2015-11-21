@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   devise_for :users, controllers: { registrations: "registrations"}
-  resources :profiles, except: :destroy
+  
+  resources :profiles, except: :destroy do 
+    resources :photos, controller: 'profiles/photos'
+  end
   
 end
