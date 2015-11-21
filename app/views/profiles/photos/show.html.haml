@@ -1,0 +1,11 @@
+#content
+  .main-container
+    .photo-container.pull-left
+      = image_tag(@photo.photo_upload.url, class: 'resp-img')
+    .photo-sidebar.pull-right
+      .profile-info-wrapper
+        .profile-info
+          .profile-photo.pull-left
+            = image_tag('default-user.png', class: 'user-photo')
+          .profile-full-name
+            = current_user.profile.full_name
