@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   respond_to :html, :js
 
   before_action :authenticate_user!
-  layout 'user'
+  layout 'user', except: [:new]
  
   def new
     @profile = Profile.new
