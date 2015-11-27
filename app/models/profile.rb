@@ -1,6 +1,10 @@
 class Profile < ActiveRecord::Base
+  
   belongs_to :user
   has_many :photos
+
+  has_many :critiques
+  has_many :photos, through: :critiques
 
   validates_presence_of :first_name, :last_name, :location, :country
 

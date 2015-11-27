@@ -1,0 +1,30 @@
+#content
+  .main-container
+    .photo-container.pull-left
+      = image_tag(@photo.photo_upload.url, class: 'resp-img')
+    .photo-sidebar.pull-right
+      .profile-info-wrapper
+        .profile-info
+          .profile-photo.pull-left
+            = image_tag('default-user.png', class: 'user-photo')
+          .profile-full-name
+            = current_user.profile.full_name
+          .photo-critique-wrapper.btn.btn-feature{style: 'color: #fff;'}
+            = link_to 'review this photo'
+      .new-critique
+        - if @been_reviewed  
+          = render 'photos/critiques/form'
+        - else 
+          %div.last-critique
+            %h5 Your review
+            = @photo.critiques.last.first_impressions
+            = @photo.critiques.last.composition
+            = @photo.critiques.last.lighting
+
+
+
+
+
+
+
+  

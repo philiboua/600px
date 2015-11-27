@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require cocoon
-
+//= require slick
 //= require bootstrap-sprockets
 //= require bootstrap/modal
 //= require_tree .
+
 
 
 

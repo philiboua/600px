@@ -8,10 +8,12 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "font-awesome-rails"
+gem 'selenium-webdriver'
 gem 'cocoon'
 gem 'devise'
 gem 'figaro'
 gem 'fog'
+gem 'slick_rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails', "~> 0.9"

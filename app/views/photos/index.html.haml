@@ -1,0 +1,40 @@
+
+
+.background-header
+  .container
+    .row
+      .col-xs-12
+        .subheader
+          %ul
+            %li Flow
+            %li Following
+            %li Activity
+
+.container
+  .row
+    .col-xs-12      
+      .new-feature-wrapper
+        .new-feature
+          %h3.title-feature
+            Looking to improve your photography skills ? 
+
+          %p.feature-details
+            Submit your shots to 600px with the tag 600pxbestadvice and you could have the chance to win a full review of your work by our team!
+
+          .btn.btn-feature
+            learn more
+
+
+
+      .wrapper-photos-index
+        %ul
+          - @photos.each do |photo|
+            %li.photo-wrapper
+              = link_to photo_path(photo.id) do 
+                = image_tag(photo.photo_upload, class: 'resp-img')
+  
+
+      
+        
+      
+
