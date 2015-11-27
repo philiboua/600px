@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit: 
+      critique:
+        create: submit your review
+        submit: submit your review

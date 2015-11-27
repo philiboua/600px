@@ -1,0 +1,173 @@
+.container { 
+
+}
+
+.main-container { 
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.photo-container {
+  
+  width: calc(100% - 300px);
+  background-color: black;
+  padding: 20px;
+  height: 650px;
+
+}
+
+.photo-sidebar { 
+  
+  width:300px;
+  height:650px;
+  background-color: #fff;
+
+}
+
+.resp-img { 
+  
+  max-width: 100%;
+  max-height:100%
+
+}
+
+.profile-info-wrapper { 
+  
+  padding: 20px;
+
+}
+
+.profile-info{ 
+  
+  width: 260px;
+  height: 50px;
+
+}
+
+.profile-photo { 
+  
+  width: 50px;
+  height: 50px;
+}
+
+.user-photo { 
+  width: 100%;
+  border-radius: 50%;
+
+}
+
+// Photo index
+
+.background-header { 
+  
+  background-color: #f7f8fa;
+  height: 60px;
+
+
+}
+
+.background-header li{ 
+  
+  display: inline;
+
+}
+
+background-header li a { 
+
+  font-size: 20px;
+
+}
+
+.subheader { 
+
+  overflow: hidden;
+
+}
+.subheader ul { 
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 0px;
+
+}
+
+.subheader > ul > li { 
+
+  float: left;
+  margin: 0 30px 0 0;
+  padding: 0;
+  line-height: 60px;
+  max-height: 60px;
+  font-size: 24px;
+  color: #71767a;
+
+}
+
+
+.new-feature-wrapper { 
+  background-image: url(image_path('stars.jpeg'));
+  background-size: cover;
+  background-position:  center;
+  height: 240px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+
+}
+
+.new-feature { 
+  
+  padding: 2% 7%;
+  color: #fff;
+
+}
+
+.title-feature { 
+  
+  font-weight: 300;
+
+}
+
+.feature-details { 
+  
+  width: 450px;
+
+}
+
+.wrapper-photos-index ul { 
+
+  list-style: none;
+  padding-left: 0px;
+
+}
+
+
+
+.photo-wrapper { 
+  
+  width: 100%;
+  
+}
+
+.btn-feature { 
+  
+  @include button-variant(#fff, #00AAFF, #00AAFF);
+  width: 150px;
+  margin-top: 20px;
+
+}
+
+// SHOW
+
+.new-critique { 
+  
+  margin-top: 10px;
+  background-color: #eeeff2;
+  padding: 10px 25px;
+  
+
+
+}
+
+

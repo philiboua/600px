@@ -1,6 +1,0 @@
-= simple_form_for [profile, photo] do |f|
-  = f.input :title
-  = f.input :description
-  = f.input :status
-  = f.input :photo_upload
-  = f.button :submit

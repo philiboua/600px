@@ -19,6 +19,7 @@
 .navigation { 
 
   height: inherit;
+  padding-right: 0px !important;
 
 }
 
@@ -78,9 +79,10 @@ btn:hover {
 
 .btn-upload { 
   
-  @include button-variant(#fff; #34bf49, #34bf49);
+  background-color: #34bf49;
   height: 100%;
   border-radius: 0px;
+  color: #fff;
 
 }
 
@@ -103,8 +105,8 @@ btn:hover {
 
 .btn-profile { 
   
+  @include button-variant(#fff, transparent, transparent);
   height: 100%;
-  background-color: transparent;
   border-radius: 0px;
   color: #fff;
 

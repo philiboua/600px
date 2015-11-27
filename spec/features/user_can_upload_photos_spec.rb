@@ -12,32 +12,42 @@ RSpec.feature 'Upload photos' do
   end
 
  
-  scenario 'a user can upload photos to his profile' do 
-    as_a_user_when_iam_at_the_home_page
-    and_i_click_on_upload
-    i_should_be_able_to_provide_general_info_about_my_photo
-    and_upload_the_file
+  scenario 'a user can upload photos' do 
+    given_the_home_page_is_open
+    when_the_user_clicks_on_upload
+    then_user_is_redirected_to_new_photo_page
+    when_user_fills_in_some_information_about_the_photo
+    and_click_on_create_photo
+    then_user_is_redirected_to_photo_page
   end
 
-  def as_a_user_when_iam_at_the_home_page
+
+  def given_the_home_page_is_open
     visit root_path
   end
 
-  def and_i_click_on_upload
+  def when_the_user_clicks_on_upload
     click_link("Upload")
-    expect(page.current_path).to eq new_profile_photo_path(@profile)
+    
   end
 
-  def i_should_be_able_to_provide_general_info_about_my_photo
+  def then_user_is_redirected_to_new_photo_page
+    expect(page.current_path).to eq new_photo_path
+  end
+
+  def when_user_fills_in_some_information_about_the_photo
     fill_in 'photo_title', with: 'Plage monogaga'
     fill_in 'photo_status', with: 'Public'
     fill_in 'photo_description', with: 'Affaire a suivre le mme'
     attach_file 'photo_photo_upload',"#{Rails.root}/spec/fixtures/profile_new_page.jpg"
   end
 
-  def and_upload_the_file
+  def and_click_on_create_photo
     click_button 'Create Photo'
-    expect(page.current_path).to eq profile_photo_path(@profile.id, Photo.last)
+  end
+
+  def then_user_is_redirected_to_photo_page
+    expect(page.current_path).to eq photo_path(Photo.last)
   end
 
   

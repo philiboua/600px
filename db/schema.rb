@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117141233) do
+ActiveRecord::Schema.define(version: 20151122224934) do
+
+  create_table "critiques", force: :cascade do |t|
+    t.text     "first_impressions"
+    t.text     "lighting"
+    t.text     "composition"
+    t.integer  "photo_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "profile_id"
+  end
+
+  add_index "critiques", ["photo_id"], name: "index_critiques_on_photo_id"
+  add_index "critiques", ["profile_id"], name: "index_critiques_on_profile_id"
 
   create_table "photos", force: :cascade do |t|
     t.string   "title"

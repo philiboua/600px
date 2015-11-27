@@ -10,7 +10,8 @@ describe ProfilesController do
       create(:profile, user_id: '1')
     end 
 
-    it " redirects to login page" do 
+
+    it "redirects to login page" do 
       #Example with user requesting to view new_profile_page
       get :new
       expect( response ).to redirect_to( new_user_session_path )

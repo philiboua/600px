@@ -1,0 +1,8 @@
+
+= simple_form_for [@photo,Critique.new] do |f|
+  = f.input :first_impressions, :input_html => {:rows => 5, style: 'max-width: 100%; height: 100%;'}
+  = f.input :composition, :input_html => {:rows => 3, style: 'max-width: 100%; height: 100%;'}
+  = f.input :lighting, :input_html => {:rows => 3, style: 'max-width: 100%; height: 100%;'}
+  = f.button :submit
+
+

@@ -12,7 +12,7 @@
       .wrapper
         %h3.brand-logo
           600px
-        %ul.navigation-item
+        %ul.navigation-item.pull-left
           %li
             = link_to root_path do  
               %i.fa.fa-home.fa-1x  
@@ -25,20 +25,23 @@
             = link_to root_path do
               %i.fa.fa-comments.fa-1x 
               Groups
-          %li.dropdown.pull-right
+        %ul.profile-item.pull-right
+          %li.dropdown
             - if current_user.profile.present?
-              %button#dropdownMenu1.btn.btn-default.dropdown-toggle.user-name{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+              %button#dropdownMenu1.btn.btn-profile.dropdown-toggle.user-name{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 = current_user.profile.first_name 
                 = current_user.profile.last_name
                 %span.caret
               %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
                 %li
                   = link_to 'view profile', profile_path(current_user)
-              = link_to new_profile_photo_path(current_user.profile) do 
-                %i.fa.fa-upload.fa-1x  
-                Upload
-              =# link_to 'upload', new_profile_photo_path(current_user.profile)
+          %li
+            = link_to new_photo_path, class: 'upload-photo' do 
+              .btn.btn-upload{style: 'border-radius: 0px;'}
+                %i.fa.fa-upload.fa-1x.upload-item 
+                  Upload
               
+  
             
 
 
