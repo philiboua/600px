@@ -28,6 +28,10 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 
+  def feature_example
+    
+  end
+
 
   private 
 

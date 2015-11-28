@@ -59,13 +59,13 @@ include Warden::Test::Helpers
   end
 
   def when_the_user_fill_in_the_review_form
-    click_on 'review this photo'
 
     within("#new_critique") do 
       fill_in 'Composition', with: "#{@critique.composition}"
       fill_in 'Lighting', with: "#{@critique.lighting}"
       fill_in 'First impressions', with: "#{@critique.first_impressions}"
     end 
+
   end
 
   def and_click_on_submit_review
@@ -73,7 +73,7 @@ include Warden::Test::Helpers
   end
 
   def then_the_page_should_reload_with_his_review
-    expect(page).to have_content "Your review"
+    expect(page).to have_content "#{@critique.composition}"
   end
 
 

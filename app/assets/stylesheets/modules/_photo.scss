@@ -15,6 +15,7 @@
   background-color: black;
   padding: 20px;
   height: 650px;
+  text-align: center;
 
 }
 
@@ -22,7 +23,7 @@
   
   width:300px;
   height:650px;
-  background-color: #fff;
+  background-color: #eeeff2;
 
 }
 
@@ -36,6 +37,7 @@
 .profile-info-wrapper { 
   
   padding: 20px;
+  background-color:#fff;
 
 }
 
@@ -166,7 +168,23 @@ background-header li a {
   background-color: #eeeff2;
   padding: 10px 25px;
   
+}
 
+.new-critique-details { 
+  
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+}
+
+.photo-review {
+  
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #eeeff2;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
 }
 

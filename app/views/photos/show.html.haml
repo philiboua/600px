@@ -9,21 +9,33 @@
             = image_tag('default-user.png', class: 'user-photo')
           .profile-full-name
             = current_user.profile.full_name
-          .photo-critique-wrapper.btn.btn-feature{style: 'color: #fff;'}
-            = link_to 'review this photo'
+
       .new-critique
         - if @been_reviewed  
           = render 'photos/critiques/form'
         - else 
-          %div.last-critique
-            %h5 Your review
-            = @photo.critiques.last.first_impressions
-            = @photo.critiques.last.composition
-            = @photo.critiques.last.lighting
+          .new-critique-details
+            %h4
+              %i.fa.fa-eye.fa-1x 
+                First Impressions
+            %p
+              = @photo.critiques.last.first_impressions
 
+          .new-critique-details
+            %h4
+              %i.fa.fa-file-image-o.fa-1x 
+                Composition
+            %p
+              = @photo.critiques.last.composition
 
+          .new-critique-details
+            %h4
+              %i.fa.fa-bolt.fa-1x 
+                Lighting
+            %p
+              = @photo.critiques.last.lighting
 
-
+         
 
 
 

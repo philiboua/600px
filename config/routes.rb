@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  
+
+  #static pages
   get 'home/index'
+  get 'photos/feature_example'
   
   root :to => "photos#index"
 

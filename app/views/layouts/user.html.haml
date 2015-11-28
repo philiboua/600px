@@ -35,6 +35,8 @@
               %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
                 %li
                   = link_to 'view profile', profile_path(current_user)
+                %li
+                  = link_to 'log out', destroy_user_session_path, method: :delete
           %li
             = link_to new_photo_path, class: 'upload-photo' do 
               .btn.btn-upload{style: 'border-radius: 0px;'}
