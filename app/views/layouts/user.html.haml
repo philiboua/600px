@@ -43,7 +43,24 @@
                 %i.fa.fa-upload.fa-1x.upload-item 
                   Upload
               
-  
+  .navigation-mobile-wrapper
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} 600px
+      #navbarCollapse.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li.link_nav_menu
+            = link_to 'profile', profile_path(current_user)
+          %li.link_nav_menu
+            = link_to 'Upload new photo', new_photo_path
+          %li.link_nav_menu
+            = link_to 'Log out', destroy_user_session_path, method: :delete
+          
             
 
 

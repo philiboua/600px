@@ -1,9 +1,43 @@
+
+/********** Navigation bar ***********/
+
 .navigation_wrapper {
   
-  height: 50px;
-  width: 100%;
-  background-color: #373737;
+  display:none;
+
+  @include firefox_breakpoint(md_portrait){
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #373737;
+  }
+
+  @include firefox_breakpoint(md_landscape){
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #373737;
+  }
+}
+
+.navigation-mobile-wrapper{
+  @include firefox_breakpoint(md_portrait){
+    display:none;
+  }
+
+  @include firefox_breakpoint(md_landscape){
+    display:none;
+  }
+
+}
+
+
+.navbar { 
   
+  margin-bottom: 0px;
+  background-color: #373737 !important;
+
+
 }
 
 .brand-logo {

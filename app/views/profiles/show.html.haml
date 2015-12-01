@@ -12,3 +12,12 @@
         .profile-buttons
           .wrapper
             = link_to 'Complete Your Profile', edit_profile_path(@profile), class: 'btn btn-default'
+
+        .profile-info
+          %ul.list-unstyled
+            %li
+              = @profile.first_name
+            %li
+              = @profile.last_name
+            %li
+              = @profile.location

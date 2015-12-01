@@ -1,13 +1,14 @@
 #content
   .main-container
+    
     .photo-container.pull-left
       = image_tag('stars.jpg', class: 'resp-img')
     .photo-sidebar.pull-right
       %p.photo-review 
-        Photo reviewed by
+        Reviewed by
       .profile-info-wrapper
         .profile-info
-          .profile-photo.pull-left
+          .profile-photo
             = image_tag('default-user.png', class: 'user-photo')
           .profile-full-name
             %p Philippe AKA
@@ -33,6 +34,39 @@
               Lighting
           %p
             Lorem ipsum dolor sit amet, vel brute soluta petentium ex. Putent detracto ne cum, in pro putent feugait. Quo eu mutat tritani tractatos. 
+    .photo-review-mobile
+      %p.photo-review 
+        Reviewed by
+        .profile-info-wrapper
+          .profile-info
+            .profile-photo
+              = image_tag('default-user.png', class: 'user-photo')
+            .profile-full-name
+              %p Philippe AKA
+
+        .new-critique
+          .new-critique-details.col-md-4
+            %h4
+              %i.fa.fa-eye.fa-1x 
+                First Impressions
+            %p
+              Lorem ipsum dolor sit amet, vel brute soluta petentium ex. Putent detracto ne cum, in pro putent feugait. Quo eu mutat tritani tractatos.
+
+          .new-critique-details.col-md-4
+            %h4
+              %i.fa.fa-file-image-o.fa-1x 
+                Composition
+            %p
+              Lorem ipsum dolor sit amet, vel brute soluta petentium ex. Putent detracto ne cum, in pro putent feugait. Quo eu mutat tritani tractatos. 
+
+          .new-critique-details.col-md-4
+            %h4
+              %i.fa.fa-bolt.fa-1x 
+                Lighting
+            %p
+              Lorem ipsum dolor sit amet, vel brute soluta petentium ex. Putent detracto ne cum, in pro putent feugait. Quo eu mutat tritani tractatos. 
+      
+
 
 
       

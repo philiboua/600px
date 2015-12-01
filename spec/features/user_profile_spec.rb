@@ -13,34 +13,37 @@ RSpec.feature 'User profile' do
 
 
     scenario 'User can update his profile' do
-      as_a_user_when_iam_at_the_home_page
-      i_want_to_be_able_to_view_my_profile
-      and_update_my_profile_information
+      given_the_home_page_is_open
+      when_the_user_view_his_profile
+      and_update_his_profile_information
+      then_user_should_see_his_profile_updated
     end
 
-    def as_a_user_when_iam_at_the_home_page
+    def given_the_home_page_is_open
       visit root_path
     end
 
-    def i_want_to_be_able_to_view_my_profile
+    def when_the_user_view_his_profile
       find(".user-name").click
       click_link("view profile")
       expect(page.current_path).to eq profile_path(@profile)
     end
 
-    def and_update_my_profile_information
+    def and_update_his_profile_information
       click_link("Complete Your Profile")
       fill_in "profile_first_name", with: 'Philippe'
       fill_in "profile_last_name", with: 'Aka'
       fill_in "profile_location", with: 'Toronto'
-
       within '.profile_country' do
         find("option[value='CA']").click
       end
-      
       fill_in "profile_about_me", with: 'Glad to code this website ;)'
       click_button 'Update Profile'
-      expect(page.current_path).to eq profile_path(@profile)
+    end
+
+    def then_user_should_see_his_profile_updated
+      expect(page.current_path).to eq profile_path(@profile.id)
+      save_and_open_page
     end
 
 end

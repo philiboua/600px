@@ -102,6 +102,7 @@
 }
 
 // Creates a wrapper for a series of columns
+
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ceil(($gutter / -2));
   margin-right: floor(($gutter / -2));
@@ -109,6 +110,7 @@
 }
 
 // Generate the extra small columns
+
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   float: left;
@@ -128,6 +130,7 @@
 }
 
 // Generate the small columns
+
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -156,6 +159,7 @@
 }
 
 // Generate the medium columns
+
 @mixin make-md-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -208,5 +212,44 @@
 @mixin make-lg-column-pull($columns) {
   @media (min-width: $screen-lg-min) {
     right: percentage(($columns / $grid-columns));
+  }
+}
+
+
+// Firefox breakpoint for different devices 
+
+  @mixin firefox_breakpoint($class) {
+
+
+  @if $class == xs_portrait {
+    @media (max-width: 320px) and (orientation: portrait){ @content; }
+  }
+
+  @if $class == xs_landscape {
+    @media (max-width: 480px) and (orientation: landscape){ @content; }
+  }
+
+  @else if $class == sm_portrait {
+    @media (min-width: 360px) and (orientation: portrait){ @content; }
+  }
+
+  @else if $class == sm_landscape {
+    @media (min-width: 360px) and (orientation: landscape) { @content; }
+  }
+ 
+  @else if $class == md_portrait {
+    @media (min-width: 768px) and (orientation: portrait) { @content; }
+  }
+
+  @else if $class == md_landscape {
+    @media (min-width: 768px) and (orientation: landscape){ @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg;"
   }
 }
