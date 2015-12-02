@@ -43,7 +43,6 @@ RSpec.feature 'User profile' do
 
     def then_user_should_see_his_profile_updated
       expect(page.current_path).to eq profile_path(@profile.id)
-      save_and_open_page
     end
 
 end

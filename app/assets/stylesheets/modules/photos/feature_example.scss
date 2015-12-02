@@ -1,0 +1,81 @@
+
+.new-feature-wrapper { 
+
+  background-image: url(image_path('stars.jpeg'));
+  background-size: cover;
+  background-position:  center;
+  height: 240px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+
+}
+
+.new-feature { 
+  
+  padding: 2% 7%;
+  color: #fff;
+
+}
+
+.title-feature { 
+  
+  font-weight: 300;
+  font-size: 20px;
+
+  @include firefox_breakpoint(md_portrait){
+
+    font-size: 24px;
+
+  }
+
+  @include firefox_breakpoint(md_landscape){
+
+    font-size: 28px;
+
+  }
+ 
+}
+
+.feature-details {
+  
+  width: 100%;
+  padding-top: 5px;
+
+  @include firefox_breakpoint(md_portrait){
+
+    width: 60%;
+    font-size: 16px;
+  }
+
+  @include firefox_breakpoint(md_landscape){
+    width: 60%;
+    font-size: 16px;
+  }
+  
+}
+
+.wrapper-photos-index ul { 
+
+  list-style: none;
+  padding-left: 0px;
+
+}
+
+
+
+.photo-wrapper { 
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  
+}
+
+.btn-feature { 
+  
+  @include button-variant(#fff, #00AAFF, #00AAFF);
+  width: 150px;
+  margin-top: 20px;
+
+}

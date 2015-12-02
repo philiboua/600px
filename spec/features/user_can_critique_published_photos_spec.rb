@@ -60,7 +60,7 @@ include Warden::Test::Helpers
 
   def when_the_user_fill_in_the_review_form
 
-    within("#new_critique") do 
+    within(".new-critique") do 
       fill_in 'Composition', with: "#{@critique.composition}"
       fill_in 'Lighting', with: "#{@critique.lighting}"
       fill_in 'First impressions', with: "#{@critique.first_impressions}"
@@ -69,7 +69,9 @@ include Warden::Test::Helpers
   end
 
   def and_click_on_submit_review
-    click_on 'submit your review'
+    within(".new-critique") do 
+      click_on 'submit your review'
+    end
   end
 
   def then_the_page_should_reload_with_his_review

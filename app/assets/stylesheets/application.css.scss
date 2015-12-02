@@ -3,23 +3,26 @@
 */
 
 
+// Bootstrap & font awesome
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'base/_mixin';
-
+@import "font-awesome";
 
 //Base files
 
+@import 'base/_mixin';
 @import 'base/_globals';
 @import 'base/_normalize';
 @import 'base/_functions';
 
+//Modules
+  
+@import 'modules/devise';
+@import 'modules/layout';
 
-//font awesome
-@import "font-awesome";
+@import 'modules/photos/index.scss';
+@import 'modules/photos/show.scss';
+@import 'modules/photos/feature_example.scss';
 
-@import 'modules/_devise';
-@import 'modules/_layout';
-@import 'modules/_photo';
-@import 'modules/_profiles';
+@import 'modules/profiles';
