@@ -47,6 +47,7 @@ group :development, :test do
 end
 
 group :test do 
+  
   gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'shoulda-matchers', require: false
   gem 'capybara'
