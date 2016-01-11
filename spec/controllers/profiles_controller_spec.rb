@@ -7,7 +7,6 @@ describe ProfilesController do
     before :each do
       login_with nil
       create(:user)
-      create(:profile, user_id: '1')
     end 
 
 

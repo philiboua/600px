@@ -1,40 +1,35 @@
 
 
 .background-header { 
-  
   background-color: #f7f8fa;
   height: 60px;
-
 }
+
+
 
 .background-header li{ 
-  
   display: inline;
-
 }
+
 
 background-header li a { 
-
   font-size: 20px;
-
 }
+
 
 .subheader { 
-
   overflow: hidden;
-
 }
 
-.subheader ul { 
 
+.subheader ul { 
   list-style: none;
   padding-left: 0px;
   margin-top: 0px;
-
 }
 
+
 .subheader > ul > li { 
-  
   float: left;
   margin: 0 30px 0 0;
   padding: 0;
@@ -42,5 +37,4 @@ background-header li a {
   max-height: 60px;
   font-size: 20px;
   color: #71767a;
-
 }

@@ -2,7 +2,6 @@
 /********** Navigation bar ***********/
 
 .navigation_wrapper {
-  
   display:none;
 
   @include firefox_breakpoint(md_portrait){
@@ -20,6 +19,7 @@
   }
 }
 
+
 .navigation-mobile-wrapper{
   @include firefox_breakpoint(md_portrait){
     display:none;
@@ -33,62 +33,50 @@
 
 
 .navbar { 
-  
   margin-bottom: 0px;
   background-color: #373737 !important;
-
 }
 
+
 .brand-logo {
-  
   margin-top: 10px;
   margin-bottom: 0px;
   font-weight: 200;
   color: #fff;
   float:left;
- 
 }
+
 
 .navigation { 
-
   height: inherit;
   padding-right: 0px !important;
-
 }
 
+
 .navigation li { 
-  
   display: inline;
   margin-right: 20px;
   height: inherit;
-
 }
 
 .navigation-item {
-  
   float:left;
   color:#b9c1c7;
   padding-top: 10px;
   font-size: 18px;
   margin-bottom: 0px;
-
 }
 
 .wrapper { 
-  
 }
 
 .navigation-item > li > a { 
-  
   color: #b9c1c7;
   text-decoration: none;
 
   &:hover {
-
     color: #fff;
-
   }
-
 }
 
 btn:hover { 
@@ -104,19 +92,16 @@ btn:hover {
 
 
 .profile-item { 
-  
   height: 50px;
   margin-bottom: 0px;
-
 }
 
+
 .btn-upload { 
-  
   background-color: #34bf49;
   height: 100%;
   border-radius: 0px;
   color: #fff;
-
 }
 
 
@@ -126,8 +111,8 @@ btn:hover {
 
 
 .upload-item { 
-  
   padding-top: 10px;
+
   &:hover { 
     color: #fff;
   }
@@ -136,10 +121,8 @@ btn:hover {
 
 
 .btn-profile { 
-  
   @include button-variant(#fff, transparent, transparent);
   height: 100%;
   border-radius: 0px;
   color: #fff;
-
 }

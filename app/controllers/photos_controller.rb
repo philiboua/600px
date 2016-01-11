@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController 
   
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :photo_been_reviewed_by_user?, only: [:show]
 
   layout 'user'

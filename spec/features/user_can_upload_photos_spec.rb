@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.feature 'Upload photos' do 
 
   include Warden::Test::Helpers

@@ -11,7 +11,7 @@ describe PhotosController do
 
     describe "GET #index" do
       it "redirects to login page" do 
-        get :index
+        get :new
         expect(response).to redirect_to(new_user_session_path)
       end 
     end
@@ -61,10 +61,7 @@ describe PhotosController do
 
     describe "GET #show" do 
       let!(:photo) {create(:photo)}
-      #
-
-
-
+      
       it "finds the given photo and assign to @photo variable" do 
         controller.stub(:photo_been_reviewed_by_user?)
         get :show, id: photo

@@ -28,7 +28,7 @@
               Groups
         %ul.profile-item.pull-right
           %li.dropdown
-            - if current_user.profile.present?
+            - if user_signed_in?
               %button#dropdownMenu1.btn.btn-profile.dropdown-toggle.user-name{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
                 = current_user.profile.first_name 
                 = current_user.profile.last_name
@@ -38,6 +38,9 @@
                   = link_to 'view profile', profile_path(current_user)
                 %li
                   = link_to 'log out', destroy_user_session_path, method: :delete
+            - else 
+              = link_to "sign in", new_user_session_path, class: 'user-name'
+
           %li
             = link_to new_photo_path, class: 'upload-photo' do 
               .btn.btn-upload{style: 'border-radius: 0px;'}
@@ -55,12 +58,14 @@
         %a.navbar-brand{:href => '/photos'} 600px
       #navbarCollapse.collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li.link_nav_menu
-            = link_to 'profile', profile_path(current_user)
+          - if user_signed_in?
+            %li.link_nav_menu
+              = link_to 'profile', profile_path(current_user)
+            %li.link_nav_menu
+              = link_to 'Log out', destroy_user_session_path, method: :delete
           %li.link_nav_menu
             = link_to 'Upload new photo', new_photo_path
-          %li.link_nav_menu
-            = link_to 'Log out', destroy_user_session_path, method: :delete
+          
           
             
 

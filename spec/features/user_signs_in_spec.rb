@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.feature 'signs in flow' do 
 
-  before(:each) do
+  before do
     @user = create(:user)
+    @profile = create(:profile, user_id: @user.id )
   end
 
     scenario 'User signs in with correct credentials' do

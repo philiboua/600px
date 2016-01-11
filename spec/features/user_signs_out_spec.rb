@@ -5,7 +5,7 @@ RSpec.feature 'User logout' do
   include Warden::Test::Helpers
   Warden.test_mode!
 
-  before(:each) do
+  before do
     @user = create(:user)
     login_as(@user, :scope => :user)
     @profile = create(:profile, user_id: @user.id)
@@ -27,7 +27,7 @@ RSpec.feature 'User logout' do
   end
 
   def then_user_is_redirected_to_signin_page
-    expect(page.current_path).to eq(new_user_session_path)
+    expect(page.current_path).to eq(root_path)
   end 
 
 

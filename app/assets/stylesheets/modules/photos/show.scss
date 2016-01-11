@@ -2,62 +2,50 @@
 // All Responsive design are based on Firefox breakpoints 
 
 .main-container { 
-
   height: 100vh;
-
 }
 
 
 .photo-container {
 
   @include firefox_breakpoint(xs_portrait){
-
     background-color: black;
     padding: 20px;
     text-align: center;
     width:100%;
     height:62%;
-
   }
 
   @include firefox_breakpoint(sm_portrait){
-
     background-color: black;
     padding: 20px;
     text-align: center;
     width:100%;
     height:70%;
-
   }
 
   @include firefox_breakpoint(sm_landscape){
-
     background-color: black;
     padding: 20px;
     text-align: center;
     width:100%;
     height:54%;
-
   }
   
   @include firefox_breakpoint(md_landscape){
-
     width: calc(100% - 300px);
     background-color: black;
     height: 100%;
     padding: 20px;
     text-align: center;
-
   }
   
 }
 
 .photo-sidebar { 
-
   display:none;
 
   @include firefox_breakpoint(md_landscape){
-
     display: block;
     width:300px;
     height:100%;
@@ -67,33 +55,26 @@
 
 }
 
-.resp-img { 
-  
+.resp-img {   
   max-width: 100%;
   max-height:100%;
   height: 100%;
   width:100%;
-
 }
 
-.profile-info-wrapper { 
-  
+.profile-info-wrapper {  
   padding: 20px;
   padding-bottom: 40px;
   background-color:#fff;
   text-align: center;
-
 }
 
 .profile-info{ 
-  
   width: 100%;
   height: 50px;
-
 }
 
 .profile-photo { 
-  
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -103,45 +84,38 @@
 .user-photo { 
   width: 100%;
   border-radius: 50%;
-
 }
 
 .photo-review-mobile { 
   
   @include firefox_breakpoint(md_landscape){
     display: none; 
-
   }
 
 }
 
 .new-critique { 
-  
   margin-top: 10px;
   background-color: #eeeff2;
   padding: 10px 25px;
-  
 }
+
 
 .new-critique-mobile { 
   @extend .new-critique;
-
 }
 
-.new-critique-details { 
-  
+.new-critique-details {  
   padding-top: 10px;
   padding-bottom: 20px;
-
 }
 
+
 .photo-review {
-  
   background-color: #EEEFF2;
   text-align: center;
   margin-bottom: 0px;
   border-bottom: 2px solid #eeeff2;
   padding-top: 5px;
   padding-bottom: 5px;
-
 }
