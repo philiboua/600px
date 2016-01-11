@@ -38,8 +38,12 @@
                   = link_to 'view profile', profile_path(current_user)
                 %li
                   = link_to 'log out', destroy_user_session_path, method: :delete
-            - else 
-              = link_to "sign in", new_user_session_path, class: 'user-name'
+            - else
+              %li.user-sign-in
+                = link_to new_user_session_path do
+                  %i.fa.fa-sign-in.fa-1x 
+                  Sign In
+              
 
           %li
             = link_to new_photo_path, class: 'upload-photo' do 
